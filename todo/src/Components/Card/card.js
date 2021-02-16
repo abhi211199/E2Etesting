@@ -6,6 +6,8 @@ import CardContent from '@material-ui/core/CardContent';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 
+import { deleteData, changeStatus } from '../Controllers/API';
+
 const useStyles = makeStyles({
   root: {
     minWidth: 275,
@@ -27,6 +29,7 @@ const useStyles = makeStyles({
 export default function SimpleCard(props) {
   const classes = useStyles();
   const bull = <span className={classes.bullet}>•</span>;
+  // const [toggle, setToggle] = React.useContext(DataContext);
 
   return (
     <Card className={classes.root}>
@@ -42,11 +45,12 @@ export default function SimpleCard(props) {
       <CardActions>
         {
           props.status ? 
-          <Button variant='contained' color='secondary' size="small">Mark as Incomplete</Button>
+          <Button variant='contained' color='secondary' size="small" onClick = {()=>changeStatus(props).then(props.onHome(true))} >Mark as Incomplete</Button>
           :
-          <Button variant='contained' color='primary' size="small">Mark as Done</Button>    
+          <Button variant='contained' color='primary' size="small" onClick = {()=>changeStatus(props).then(props.onHome(true))} >Mark as Done</Button>    
         }
         <Button variant='contained' color='secondary' size="small">Edit</Button>
+        <Button variant='contained' color='secondary' size="small" onClick = {()=>deleteData(props.id)}>Delete</Button>
       </CardActions>
     </Card>
   );
