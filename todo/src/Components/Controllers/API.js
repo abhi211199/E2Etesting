@@ -10,7 +10,7 @@ export function fetchData()
 
 export function deleteData(id)
 {
-    // return axios.delete(URL+'/'+id).then(()=>BaseApp.getData());
+    return axios.delete(URL+'/'+id);
 }
 
 export function changeStatus(props)
@@ -20,4 +20,23 @@ export function changeStatus(props)
         note: props.note,
         status: !props.status
     });
+}
+
+export function addData(props)
+{
+    return axios.put(URL,{
+        summary: props.summary, 
+        note: props.note,
+        status: false
+    });
+}
+
+export function editData(props)
+{
+    return axios.patch(URL+'/'+props.id,{
+        summary: props.summary, 
+        note: props.note,
+        status: props.status
+    })
+    
 }

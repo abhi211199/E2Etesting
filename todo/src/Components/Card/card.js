@@ -7,6 +7,7 @@ import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 
 import { deleteData, changeStatus } from '../Controllers/API';
+import EditBtn from './EditBtn';
 
 const useStyles = makeStyles({
   root: {
@@ -49,8 +50,9 @@ export default function SimpleCard(props) {
           :
           <Button variant='contained' color='primary' size="small" onClick = {()=>changeStatus(props).then(props.onHome(true))} >Mark as Done</Button>    
         }
-        <Button variant='contained' color='secondary' size="small">Edit</Button>
-        <Button variant='contained' color='secondary' size="small" onClick = {()=>deleteData(props.id)}>Delete</Button>
+        {/* <Button variant='contained' color='secondary' size="small">Edit</Button> */}
+        <EditBtn note = {props.note} summary = {props.summary} status = {props.status} id = {props.id} onHome = {()=>props.onHome()} />
+        <Button variant='contained' color='secondary' size="small" onClick = {()=>deleteData(props.id).then(props.onHome(true))}>Delete</Button>
       </CardActions>
     </Card>
   );
