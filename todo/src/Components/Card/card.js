@@ -40,7 +40,13 @@ export default function SimpleCard(props) {
         </Typography>
       </CardContent>
       <CardActions>
-        <Button size="small">{props.status?'Mark as Incomplete':'Mark as Done'}</Button>
+        {
+          props.status ? 
+          <Button variant='contained' color='secondary' size="small">Mark as Incomplete</Button>
+          :
+          <Button variant='contained' color='primary' size="small">Mark as Done</Button>    
+        }
+        <Button variant='contained' color='secondary' size="small">Edit</Button>
       </CardActions>
     </Card>
   );
