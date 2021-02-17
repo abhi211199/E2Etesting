@@ -4,18 +4,29 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
+    "start": "nyc --silent node index.js",
     "debug": "nodemon index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "instrument": "nodemon -r @cypress/instrument-cra index.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@cypress/instrument-cra": "^1.4.0",
     "body-parser": "^1.19.0",
     "cors": "^2.8.5",
     "express": "^4.17.1",
+    "istanbul-lib-coverage": "^3.0.0",
     "nodemon": "^2.0.7",
     "sequelize": "^6.5.0",
     "sqlite3": "^5.0.1"
+  },
+  "devDependencies": {
+    "@cypress/code-coverage": "^3.9.2",
+    "babel-plugin-istanbul": "^6.0.0",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "cypress": "^6.5.0",
+    "mocha": "^5.2.0",
+    "nyc": "^15.1.0"
   }
 }

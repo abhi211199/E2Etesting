@@ -1,0 +1,11 @@
+{
+  "fixturesFolder": false,
+  "baseUrl": "http://localhost:8080",
+  "expectBackendCoverageOnly": true,
+  "env": {
+    "codeCoverage": {
+      "url": "http://localhost:8080/__coverage__",
+      "expectBackendCoverageOnly": true
+    }
+  }
+}

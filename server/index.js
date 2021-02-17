@@ -8,6 +8,10 @@ const { Sequelize, DataTypes } = require('sequelize');
 app.use(bodyParser.json())
 app.use(cors())
 
+if (global.__coverage__) {
+    require('@cypress/code-coverage/middleware/express')(app)
+  }
+  
 const sequelize = new Sequelize({
     dialect: 'sqlite',
     storage: './database.sqlite'
