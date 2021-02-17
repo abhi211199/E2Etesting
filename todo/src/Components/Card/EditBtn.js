@@ -17,7 +17,7 @@ export default function BaseApp(props)
 
     return(
         <div>
-            <Button className={classes.add} variant='contained' color='secondary' size="small" onClick = {()=>{setFormDisp(true)}} >Edit</Button>        
+            <Button className={classes.add,'Edit'} variant='contained' color='secondary' size="small" onClick = {()=>{setFormDisp(true)}} >Edit</Button>        
             {formDisp ? <Form onHome = {(data)=>{editData(data);setFormDisp(false);props.onHome()}} onCancel = {()=>setFormDisp(false)} note = {props.note} summary = {props.summary} status = {props.status} id = {props.id} /> : ''}
         </div>
     )

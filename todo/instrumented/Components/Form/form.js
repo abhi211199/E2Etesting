@@ -53,7 +53,7 @@ export default function FormDialog(props) {
           <Button onClick={handleClose} color="primary">
             Cancel
           </Button>
-          <Button id='sendData' onClick={handleClose} color="primary" onClick = {()=>sendData()}>
+          <Button onClick={handleClose} color="primary" onClick = {()=>sendData()}>
             Done
           </Button>
         </DialogActions>

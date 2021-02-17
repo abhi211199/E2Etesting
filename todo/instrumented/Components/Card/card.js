@@ -46,13 +46,13 @@ export default function SimpleCard(props) {
       <CardActions>
         {
           props.status ? 
-          <Button className = 'markAsIncomplete' variant='contained' color='secondary' size="small" onClick = {()=>changeStatus(props).then(props.onHome(true))} >Mark as Incomplete</Button>
+          <Button variant='contained' color='secondary' size="small" onClick = {()=>changeStatus(props).then(props.onHome(true))} >Mark as Incomplete</Button>
           :
-          <Button className = 'markAsDone' variant='contained' color='primary' size="small" onClick = {()=>changeStatus(props).then(props.onHome(true))} >Mark as Done</Button>    
+          <Button variant='contained' color='primary' size="small" onClick = {()=>changeStatus(props).then(props.onHome(true))} >Mark as Done</Button>    
         }
         {/* <Button variant='contained' color='secondary' size="small">Edit</Button> */}
         <EditBtn note = {props.note} summary = {props.summary} status = {props.status} id = {props.id} onHome = {()=>props.onHome()} />
-        <Button className = 'deleteBtn' variant='contained' color='secondary' size="small" onClick = {()=>deleteData(props.id).then(props.onHome(true))}>Delete</Button>
+        <Button variant='contained' color='secondary' size="small" onClick = {()=>deleteData(props.id).then(props.onHome(true))}>Delete</Button>
       </CardActions>
     </Card>
   );
