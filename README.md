@@ -1,6 +1,6 @@
 # E2Etesting
-The repository contains a basic ToDo app built upon ReactJS and ExpressJS with SQLite database to host the database. 
-The prime purpose of the project is to understand the working of End to End testing tools like Cypress, understanding concepts like Instrumentation of Code, finding code touchpoints,
+The repository contains a basic ToDo app built upon `ReactJS` and `ExpressJS` with `SQLite database` to host the database. 
+The prime purpose of the project is to understand the working of End to End testing tools like `Cypress`, understanding concepts like Instrumentation of Code, finding code touchpoints,
 code coverage and generating corresponding code coverage reports for each components.
 
 # Instructions to run the project
