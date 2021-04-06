@@ -14,6 +14,10 @@ code coverage and generating corresponding code coverage reports for each compon
   ```
   cd E2Etesting/server
   ```
+- Install NPM modules
+  ```
+  npm i
+  ```
 - Turn on the server
   ```
   npm run debug
@@ -24,6 +28,10 @@ code coverage and generating corresponding code coverage reports for each compon
 - Enter into the server directory
   ```
   cd E2Etesting/todo
+  ```
+- Install NPM modules
+  ```
+  npm i
   ```
 - Start the frontend server
   ```
