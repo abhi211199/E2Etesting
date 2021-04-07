@@ -48,7 +48,7 @@ code coverage and generating corresponding code coverage reports for each compon
   By now, the code may be running in localhost:3000, using `window.__coverage__` in browser Developer tools console will fetch the instrumented code.
  ## Steps to find code coverage
  - Make sure that the Express server is running!
- - Open a new terminal. `npx run cypress` will open the Cypress dashboard contatining all the unit tests! The tests can be executed individually or in a sequence.
+ - Open a new terminal. `npx cypress open` will open the Cypress dashboard contatining all the unit tests! The tests can be executed individually or in a sequence.
  - Once the tests are executed, the code coverage report can be found at `E2Etesting/todo/coverage/lcov-report/index.html`
  
  
@@ -62,5 +62,5 @@ code coverage and generating corresponding code coverage reports for each compon
  
  ## Steps to find code coverage
  - `npm start` This code will host the Express server along with `nyc` that is responsible for instrumenting the code using `istanbul.js` on the go.
- - Open a new terminal. `npx run cypress` will open the Cypress dashboard contatining all the unit tests! The tests can be executed individually or in a sequence.
+ - Open a new terminal. `npx cypress open` will open the Cypress dashboard contatining all the unit tests! The tests can be executed individually or in a sequence.
  - Once the tests are executed, the code coverage report can be found at `E2Etesting/server/coverage/lcov-report/index.html`
